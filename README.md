@@ -8,7 +8,7 @@
 - Panel Waybar
 - Notify Daemon Dunst
 - Launcher Rofi
-- File Manager Dolphin Ranger
+- File Manager Dolphin Ranger Thunar
 
 ## Packages installed
 
