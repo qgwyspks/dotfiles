@@ -75,6 +75,7 @@ return {
     },
     {
         "akinsho/bufferline.nvim",
+        version = "*",
         keys = {
             { "<leader>bp", "<cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
             { "<leader>bP", "<cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },

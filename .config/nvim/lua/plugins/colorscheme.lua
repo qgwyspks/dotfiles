@@ -4,7 +4,7 @@ return {
         lazy = false,
         config = function()
             -- load the colorscheme here
-            vim.cmd([[colorscheme everforest]])
+            -- vim.cmd([[colorscheme everforest]])
         end,
     }
 }
