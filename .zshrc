@@ -15,37 +15,41 @@ zinit ice as"command" from"gh-r" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
-zinit ice lucid wait='1'
-zinit light skywind3000/z.lua
+# 自动建议
+zinit ice lucid wait atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
 
-zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
-      zdharma-continuum/fast-syntax-highlighting \
-  atload"_zsh_autosuggest_start" \
-      zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall -q .' \
-      zsh-users/zsh-completions
+# 语法高亮
+zinit ice lucid wait atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
+# zinit light zsh-users/zsh-syntax-highlighting
 
-#zinit light zsh-users/zsh-syntax-highlighting
+# 自动补全
+zinit ice lucid wait blockf
+zinit light zsh-users/zsh-completions
+
 
 zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZ::lib/history.zsh
+unsetopt share_history
 #zinit snippet OMZ::lib/key-bindings.zsh
 zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
 #zinit ice svn
 #zinit snippet OMZ::plugins/extract
 
-zinit ice wait'2' lucid
+# 自动跳转
+zinit ice lucid wait'1'
+zinit light agkozak/zsh-z
+
+
+zinit ice wait'1' lucid
 zinit light zdharma-continuum/history-search-multi-word
 
-zinit ice wait'3' lucid
-zinit light zsh-users/zsh-history-substring-search
+#bindkey '^R' history-search-multi-word
 
-#export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN:en_US
+#zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
-[[ ! -f ~/.alias ]] || source ~/.alias 
+[[ ! -f ~/.config/zsh/alias.zsh ]] || source $HOME/.config/zsh/alias.zsh
+[[ ! -f ~/.config/zsh/env.zsh ]] || source $HOME/.config/zsh/env.zsh
 
-# pipx
-export PATH="$PATH:$HOME.local/bin"
