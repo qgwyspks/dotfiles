@@ -1,7 +1,15 @@
+# ..
+alias -g ...='../..'
+alias -g ....='../../..'
+
+
 # ls
-alias ls='ls --color=auto'
-alias ll='ls -l --color=auto'
-alias la='ls -a --color=auto'
+alias ls='ls --color -F'
+alias ll='ls --color -F -l'
+alias la='ls --color -F -a'
+alias lla='ls --color -F -l -a'
+#alias ls='exa'
+
 
 # pacman
 alias clean='sudo pacman -R $(pacman -Qdtq)'
