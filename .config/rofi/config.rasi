@@ -1,0 +1,26 @@
+configuration {
+  modes: "window,drun,run,ssh,filebrowser";
+  cycle: true;
+  show-icons: true;
+
+  drun-match-fields: "name,generic,exec,categories,keywords";
+  drun-categories: "";
+  drun-show-actions: false;
+  drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+  drun-url-launcher: "xdg-open";
+
+  run-command: "{cmd}";
+  run-list-command: "";
+  run-shell-command: "{terminal} -e {cmd}";
+
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "~/.config/rofi/launchers/style-1.rasi"
