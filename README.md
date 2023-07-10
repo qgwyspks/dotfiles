@@ -2,13 +2,13 @@
 
 ## Hyprland Dependencies
 
-- Window Manager Hyprland
-- Shell Zsh + zinit + starship
-- Terminal Kitty
-- Panel Waybar
-- Notify Daemon Dunst
-- Launcher Rofi
-- File Manager Dolphin Ranger Thunar
+- **WM**: Hyprland
+- **Shell**: Zsh + zinit + starship
+- **Terminal**: Kitty
+- **Panel**: Waybar
+- **Notify Daemon**: Dunst
+- **Launcher**: Rofi
+- **File Manager**: Ranger Thunar
 
 ## Packages installed
 
@@ -16,7 +16,7 @@
 
 - Hyprland-git
 - waybar-hyprland-git
-- rofi-lbonn-wayland-git App Launchers
+- rofi-lbonn-wayland-git
 - xdg-desktop-portal-hyprland-git
 - hypaper
 - swaylock-effects-git
