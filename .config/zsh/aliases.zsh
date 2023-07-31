@@ -28,6 +28,7 @@ alias sys="systemctl"
 alias bye="shutdown -h now"
 
 # nvim
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
@@ -49,3 +50,9 @@ alias lzd="lazydocker"
 
 # LazyGit
 alias lg="lazygit"
+
+# firefox
+alias firefox="firefox-developer-edition"
+
+# edge
+alias edge="microsoft-edge-dev"
