@@ -1,3 +1,0 @@
-# My-Nvim
-
-- Lazy.nvim 

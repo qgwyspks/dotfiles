@@ -66,7 +66,6 @@ tooltip {
 #network,
 #bluetooth,
 #pulseaudio,
-#custom-cliphist,
 #custom-power,
 #tray {
     color: #ffffff;
@@ -76,8 +75,6 @@ tooltip {
     margin: 3px 0px 3px 0px;
 }
 
-
-/* resource monitor block */
 
 #disk {
     border-radius: 10px 0px 0px 10px;
@@ -96,8 +93,6 @@ tooltip {
 }
 
 
-/* date time block */
-
 #clock {
     border-radius: 10px;
     margin-left: 6px;
@@ -106,20 +101,29 @@ tooltip {
 }
 
 
-/* workspace window block */
-
 #workspaces {
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 6px;
+    margin-left: 6px;
 }
 
 #window {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
     padding-right: 12px;
+    padding-left: 12px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
-
-/* control center block */
+#network {
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
 
 #battery {
     border-radius: 10px 0px 0px 10px;
@@ -128,12 +132,8 @@ tooltip {
     padding-right: 4px;
 }
 
-#backlight {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
 #network {
+
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -150,24 +150,18 @@ tooltip {
     margin-right: 6px;
 }
 
-#custom-cliphist {
-    border-radius: 10px 0px 0px 10px;
-    padding-left: 12px;
-    padding-right: 4px;
-    margin-left: 6px;
-}
-
 #tray {
-    border-radius: 0px 10px 10px 0px;
-    padding-left: 4px;
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 12px;
     padding-right: 12px;
+    margin-left: 6px;
     margin-right: 6px
 }
 
 #custom-power {
     border-radius: 10px 10px 10px 10px;
-    padding-left: 6px;
-    padding-right: 6px;
-    margin-left: 4px;
-    margin-right: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 6px;
+    margin-right: 6px;
 }

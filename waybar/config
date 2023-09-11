@@ -6,34 +6,38 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "modules-left": ["clock","disk","memory"],
-    "modules-center": ["wlr/workspaces","hyprland/window"],
-    "modules-right": ["battery","backlight","network","bluetooth","pulseaudio","custom/cliphist","tray","custom/power"],
+    "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "network",
+      "disk",
+      "memory",
+      "battery",
+      "backlight",
+      "bluetooth",
+      "pulseaudio",
+      "tray",
+      "custom/power"
+    ],
 
 
-// center modules //
-
-   "wlr/workspaces": {
+   "hyprland/workspaces": {
        "disable-scroll": true,
        "all-outputs": true,
        "on-click": "activate",
-       "persistent_workspaces": {
-           "1": [],
-           "2": [],
-           "3": [],
-           "4": [],
-           "5": [],
-           "6": [],
-           "7": [],
-           "8": [],
-           "9": [],
-           "10": []
-       }
    },
 
     "hyprland/window": {
         "format": "  {}",
+        "max-length": 200,
         "separate-outputs": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
         "rewrite": {
             "tittu@kryptonite:(.*)": "$1 ",
             "(.*) — Mozilla Firefox": "$1 󰈹",
@@ -41,11 +45,9 @@
             "(.*) - Visual Studio Code": "$1 󰨞",
             "(.*)Visual Studio Code": "Code 󰨞",
             "(.*) — Dolphin": "$1 󰉋"
-          }
+        },
     },
 
-
-// left modules //
 
     "memory": {
         "interval": 30,
@@ -70,24 +72,21 @@
     },
 
 
-// right modules //
     "battery": {
+        "bat": "BAT0",
         "states": {
             "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
     },
 
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", ""],
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-",
         "min-length": 6
@@ -95,12 +94,12 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {essid} {signalStrength}%",
+        "format-wifi": "  {essid}",
         "format-ethernet": "󱘖 Wired",
         "tooltip-format": "󱘖 {ipaddr}/{cidr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
         "format-linked": "󱘖 {ifname} (No IP)",
         "format-disconnected": " Disconnected",
-        "format-alt": " {signalStrength}%",
+        "max-length": 50,
     },
 
     "bluetooth": {
@@ -132,16 +131,6 @@
             "car": "",
             "default": ["", "", ""]
         }
-    },
-
-    "custom/cliphist": {
-        "format": "{}",
-        "exec": "~/.config/hypr/scripts/cliphist.sh t",
-        "on-click": "~/.config/hypr/scripts/cliphist.sh c",
-        //"on-click-right": "~/.config/hypr/scripts/cliphist.sh d",
-        //"on-click-middle": "~/.config/hypr/scripts/cliphist.sh w",
-        "interval" : 86400, // once every day
-        "tooltip": true
     },
 
     "tray": {
