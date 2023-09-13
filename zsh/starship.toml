@@ -48,12 +48,12 @@ style = 'bold red'
 [os]
 format = '[($symbol)]($style)'
 style = "bold blue"
-disabled = true
+# disabled = true
 
 [os.symbols]
 Windows = ' '
 Macos = ' '
-#Arch = ""
+Arch = ''
 
 [package]
 disabled = true
